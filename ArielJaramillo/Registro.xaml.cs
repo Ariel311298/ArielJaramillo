@@ -36,7 +36,10 @@ namespace ArielJaramillo
         private async void btnGuardar_Clicked(object sender, EventArgs e)
         {
             string nombre = txtNombreAlumno.Text;
-            await Navigation.PushAsync(new Resumen(nombre));
+            double cuotaInicial = Convert.ToDouble(txtCuotaInicial.Text);
+            double pagoInicial = Convert.ToDouble(txtPagoInicial.Text);
+            double total = pagoInicial * 5 + cuotaInicial;
+            await Navigation.PushAsync(new Resumen(nombre, total));
         }
     }
 }

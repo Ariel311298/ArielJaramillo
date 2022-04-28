@@ -3,10 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArielJaramillo.Resumen">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="15">
+                <Label x:Name="lblNombre" HorizontalTextAlignment="End" TextColor="Black" FontSize="15">
+                </Label>
+                <Label Text="RESUMEN" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center">
+                </Label>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="65"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Nombre del estudiante:" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Total:" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="lblNombreAlumno" Grid.Row="0" Grid.Column="1"/>
+                    <Label x:Name="lblTotal" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
