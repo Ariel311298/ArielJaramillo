@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArielJaramillo.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15">
+                <Label x:Name="lblNombre" HorizontalTextAlignment="End" TextColor="White" FontSize="12">
+                </Label>
+
+                <Label Text="REGISTRO DE ESTUDIANTES" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center">
+                </Label>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="65"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Nombre del estudiante:" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Cuota Inicial:" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Pago Mensual:" HorizontalTextAlignment="Center"/>
+                    <Entry x:Name="txtNombreAlumno" Placeholder="Ingrese el nombre del estudiante" Keyboard="Text" Grid.Row="0" 
+                    Grid.Column="1" MaxLength="25"/>
+                    <Entry x:Name="txtCuotaInicial" Placeholder="0.00" Keyboard="Numeric" Grid.Row="1" 
+                    Grid.Column="1"/>
+                    <Entry x:Name="txtPagoInicial" Text="0.00" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+
+
+                <Button x:Name="btnCalcularPM" Text="CALCULAR" Clicked="btnCalcularPM_Clicked"/>
+                <Button x:Name="btnGuardar" Text="GUARDAR" Clicked="btnGuardar_Clicked"/> 
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
