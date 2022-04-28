@@ -19,10 +19,5 @@ namespace ArielJaramillo
             lblNombreAlumno.Text = nombre;
             lblTotal.Text = Convert.ToDouble(total).ToString();
         }
-
-        private void txtTotal_TextChanged(object sender, TextChangedEventArgs e)
-        {
-         
-        }
     }
 }
