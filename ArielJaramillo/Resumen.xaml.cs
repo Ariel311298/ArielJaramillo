@@ -12,12 +12,13 @@ namespace ArielJaramillo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(string nombre, double total)
+        public Resumen(string nombre, double total, string usuario)
         {
             InitializeComponent();
             DisplayAlert("Datos enviados", "Elemento guardado con exito", "Cerrar");
             lblNombreAlumno.Text = nombre;
             lblTotal.Text = Convert.ToDouble(total).ToString();
+            lblNombre.Text = usuario;   
         }
     }
 }
